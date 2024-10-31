@@ -1,0 +1,16 @@
+{
+    "name": "gusta/projeto-ajax-consulta-cep",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Gusta\\ProjetoAjaxConsultaCep\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Gustavo Ribeiro",
+            "email": "gugzribeiro@gmail.com"
+        }
+    ],
+    "require": {}
+}
