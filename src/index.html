@@ -1,20 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consulta CEP</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./views/index.css">
-    <link rel="icon" href="./views/images/favicon.ico"> 
-</head>
-<body>
-    <form action="ConsultaCEP.php" method="post">
-        <div class="form-group">
-            <label for="cep">Digite o CEP:</label>
-            <input type="text" id="cep" name="cep" class="form-control" required>
-        </div>
-        <button type="submit" class="btn btn-primary">Consultar</button>
+
+<html lang="pt-BR">
+    <head>
+    <title>Consultar CEP</title>
+    <meta charset="utf-8">
+
+    <!-- Adicionando Javascript -->
+    <script src="./views/JavaScript/LimpaFormulario.js"></script>
+    <script src="./views/JavaScript/Callback.js"></script>
+    <script src="./views/JavaScript/PesquisaValor.js"></script>        
+
+    <link rel="stylesheet" href="./views/css/index.css">
+
+    </head>
+
+    <body>
+    <!-- Inicio do formulario -->
+    <form method="get" action="javascript:void(0);">
+        <label>Cep:
+            <input name="cep" type="text" id="cep" value="" size="10" maxlength="9"
+                   onblur="pesquisacep(this.value);" /></label><br />
+        <label>Rua:
+            <input name="rua" type="text" id="rua" size="60" /></label><br />
+        <label>Bairro:
+            <input name="bairro" type="text" id="bairro" size="40" /></label><br />
+        <label>Cidade:
+            <input name="cidade" type="text" id="cidade" size="40" /></label><br />
+        <label>Estado:
+            <input name="uf" type="text" id="uf" size="2" /></label><br />
+        <label>IBGE:
+            <input name="ibge" type="text" id="ibge" size="8" /></label><br />
     </form>
-</body>
-</html>
+    </body>
+    </html>
